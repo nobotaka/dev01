@@ -9,6 +9,16 @@ New-SelfSignedCertificate -DnsName "localhost","DESKTOP-EP4CFDU","192.168.3.19" 
 New-SelfSignedCertificate -DnsName "localhost","DESKTOP-EP4CFDU" -TextExtension "192.168.3.19" -CertStoreLocation "cert:\LocalMachine\My"
 
 ```
+
+```
+$params = @{
+    Subject = 'localhost'
+    TextExtension = @('2.5.29.17={text}DNS=localhost&IPAddress=192.168.3.19')
+    CertStoreLocation = 'cert:\LocalMachine\My'
+}
+New-SelfSignedCertificate @params
+```
+
 https://qiita.com/Yasuwo/items/c6fd5089bfc6bd8ce709
 
 
