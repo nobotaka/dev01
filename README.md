@@ -1,10 +1,10 @@
 # HTTPS
 [Windows10でIISを構築する基本手順（IIS）](https://qiita.com/portfoliokns3/items/2b1da4ffaa4669c63724#:~:text=Windows10でIISを構築する基本手順（IIS）%201%20"Windowsの機能の有効かまたは無効化"から"Windowsの機能"設定を行う%202%20インターネットインフォメーションサービスを設定する%203,IISの起動ができているかを確認する%204%20接続がうまくいかない場合は、ファイアーウォールの設定を確認する%205%20制御するためのIISマネージャー%206%20接続先ページを変更してみる)
 
-[IISでHttps通信を有効化するには](https://migratory-worker.com/archives/3871)
+[IISでHttps通信を有効化するには](https://migratory-worker.com/archives/3871)  
 [ローカルIIS Webサイトの自己署名証明書の作成方法](https://qiita.com/SY81517/items/347e86582054f8e92742)
 ```
-aaaa
+New-SelfSignedCertificate -DnsName "localhost" -CertStoreLocation "cert:\LocalMachine\My"
 ```
 
 
