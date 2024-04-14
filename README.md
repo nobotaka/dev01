@@ -6,6 +6,7 @@
 ```
 New-SelfSignedCertificate -DnsName "localhost" -CertStoreLocation "cert:\LocalMachine\My"
 ```
+https://qiita.com/Yasuwo/items/c6fd5089bfc6bd8ce709
 
 
 ## 参考資料
