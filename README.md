@@ -9,7 +9,7 @@ New-SelfSignedCertificate -DnsName "localhost","DESKTOP-EP4CFDU","192.168.3.19" 
 New-SelfSignedCertificate -DnsName "localhost","DESKTOP-EP4CFDU" -TextExtension "192.168.3.19" -CertStoreLocation "cert:\LocalMachine\My"
 
 ```
-
+https://learn.microsoft.com/en-us/powershell/module/pki/new-selfsignedcertificate?view=windowsserver2022-ps  
 ```
 $params = @{
     Subject = 'localhost'
