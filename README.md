@@ -5,6 +5,7 @@
 [ローカルIIS Webサイトの自己署名証明書の作成方法](https://qiita.com/SY81517/items/347e86582054f8e92742)
 ```
 New-SelfSignedCertificate -DnsName "localhost" -CertStoreLocation "cert:\LocalMachine\My"
+New-SelfSignedCertificate -DnsName "localhost","DESKTOP-EP4CFDU","192.168.3.19" -CertStoreLocation "cert:\LocalMachine\My"
 ```
 https://qiita.com/Yasuwo/items/c6fd5089bfc6bd8ce709
 
