@@ -3,16 +3,21 @@
 
 [IISでHttps通信を有効化するには](https://migratory-worker.com/archives/3871)  
 [ローカルIIS Webサイトの自己署名証明書の作成方法](https://qiita.com/SY81517/items/347e86582054f8e92742)
+
 ```
 New-SelfSignedCertificate -DnsName "localhost" -CertStoreLocation "cert:\LocalMachine\My"
-New-SelfSignedCertificate -DnsName "localhost","DESKTOP-EP4CFDU","192.168.3.19" -CertStoreLocation "cert:\LocalMachine\My"
-New-SelfSignedCertificate -DnsName "localhost","DESKTOP-EP4CFDU" -TextExtension "192.168.3.19" -CertStoreLocation "cert:\LocalMachine\My"
 ```
+
+```
+New-SelfSignedCertificate -DnsName "localhost","DESKTOP-EP4CFDU" -CertStoreLocation "cert:\LocalMachine\My"
+```
+
 https://learn.microsoft.com/en-us/powershell/module/pki/new-selfsignedcertificate?view=windowsserver2022-ps  
 https://learn.microsoft.com/ja-jp/windows/msix/package/create-certificate-package-signing  
 https://qiita.com/okuoku/items/fd6301df0ad520cef656  
 https://www.nextdoorwith.info/wp/se/how-to-create-self-signed-rootca-server-client-certificate/#google_vignette  
 ```
+
 $params = @{
     Subject = 'localhost'
     TextExtension = @('2.5.29.17={text}DNS=localhost&IPAddress=192.168.3.19')
